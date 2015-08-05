@@ -95,5 +95,18 @@ function end(str, target) {
 
 end('Bastian', 'n');
 
-
+//Bonfire: Repeat a string repeat a string Difficulty
+function repeat(str, num) {
+  // repeat after me
+  var arrayOfString = [],
+      count = num;
+  
+  while (count > 0){
+    arrayOfString[arrayOfString.length] = str;
+    count --;
+  } 
+  
+  return num > 0 ? arrayOfString = arrayOfString.join('') : '';    
+}
+repeat('abc', 5);
 
