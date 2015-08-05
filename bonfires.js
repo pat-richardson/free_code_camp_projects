@@ -67,6 +67,22 @@ function titleCase(str) {
 
 titleCase("I'm a little tea pot");
 
+//Bonfire: Return Largest Numbers in Arrays
+function largestOfFour(arr) {
+  var maxNums = [];
+ 
+  function getMaxOfArray(numArray) {
+     return Math.max.apply(null, numArray);
+  }
+  
+  for(var key in arr){
+    maxNums.push(getMaxOfArray(arr[key]));
+  }
+  return maxNums;
+
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
 
