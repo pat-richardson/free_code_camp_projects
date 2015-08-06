@@ -121,6 +121,46 @@ function truncate(str, num) {
 
 truncate('A-tisket a-tasket A green and yellow basket', 11);
 
+//Bonfire: Chunky Monkey
+function chunk(arr, size) {
+  // Break it up.
+  var twoDArr = [];
+  for(var i = 0; arr.length > 0; i++){
+    twoDArr.push(arr.splice(0,size));
+  }  
+  return twoDArr;
+}
+
+chunk(['a', 'b', 'c', 'd'], 2);
+
+//Bonfire: Slasher Flick
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  arr.splice(0,howMany);
+  return arr;
+}
+
+slasher([1, 2, 3], 2);
+
+//Bonfire: Mutations
+function mutation(arr) {  
+  var lowered = arr.map(function(val){
+    return val.toLowerCase();
+  });
+  
+  var key = lowered[1].split('');
+  for(var i = 0; i < key.length; i++){
+    if(lowered[0].indexOf(key[i]) === -1){
+      return false;
+    }
+  }
+
+  return true;
+
+}
+
+mutation(['hello', 'hey']);
+
 
 
 
